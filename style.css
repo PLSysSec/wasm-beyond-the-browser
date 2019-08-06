@@ -65,6 +65,7 @@ header a {
     display: relative;
     font-size: 18px;
     padding: 0 20px;
+    padding-bottom: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,23 +92,33 @@ p {
     border: 1px solid #9882FF;
     margin-top: 5px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     min-height: 50px;
+    flex-basis: content;
+    flex-shrink: 1;
 }
 
 .schedule .event .desc {
     order: 2;
+    padding: .5em 2em;
+    align-self: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.schedule .event .desc em {
     font-weight: bold;
-    padding: 0 2em;
+    display: block;
+    margin-bottom: .5em;
 }
 .schedule .event .time {
     order: 1;
     background: #654ff0;
     color: white;
     font-weight: bold;
-    height: 100%;
     width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
